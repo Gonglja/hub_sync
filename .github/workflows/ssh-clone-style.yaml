@@ -1,0 +1,9 @@
+- name: ssh clone style
+  uses: Yikun/hub-mirror-action@master
+  with:
+    src: github/Gonglja
+    dst: gitee/glj0
+    dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+    dst_token: ${{ secrets.GITEE_TOKEN }}
+    clone_style: "ssh"
+    white_list: "linux-driver,Sky,dockerfile"
