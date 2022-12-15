@@ -1,4 +1,4 @@
-- name: ssh clone style
+- name: sync2gitee
   uses: Yikun/hub-mirror-action@master
   with:
     src: github/Gonglja
