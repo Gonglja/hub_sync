@@ -23,6 +23,6 @@ jobs:
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
         account_type: user
-        static_list: 'linux-driver,Sky,dockerfile'
+        static_list: 'linux-driver,Sky,dotfiles,obsidian,stm32_can_forward,oscillograph,translate'
         force_update: true 
  
