@@ -19,7 +19,7 @@ jobs:
       uses: Yikun/hub-mirror-action@master
       with:
         src: github/Gonglja
-        dst: gitee/glj0
+        dst: ${{ GITEE_USER }}
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
         account_type: user
