@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Mirror the sigminer repos to Gitee.
-      uses: Yikun/hub-mirror-action@master
+      uses: Gonglja/hub-mirror-action@master
       with:
         # 源地址
         src: github/Gonglja
