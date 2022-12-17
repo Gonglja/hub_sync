@@ -1,0 +1,43 @@
+on:
+  push:
+    # delete this item if you don't want to trigger this workflow when modify this repo
+    branches: master
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # UTC 20:00 -> CST (China) 4:00, see https://datetime360.com/cn/utc-cst-china-time/
+    - cron: '0 20 * * *'
+  pull_request:
+    branches: master
+    
+name: Mirror GitHub All Repos to Gitee
+jobs:
+  run:
+    name: Sync-Gitee-Manual-and-Org
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generate repo list
+      id: repo
+      uses: yi-Xu-0100/repo-list-generator@v0.4.1
+      with:
+        user: yi-Xu-0100
+        my_token: ${{ secrets.REPO_TOKEN }}
+
+    - name: Mirror the sigminer repos to Gitee.
+      uses: Yikun/hub-mirror-action@master
+      with:
+        # 源地址
+        src: github/FuntionTeam
+        # 目的地址
+        dst: gitee/funtionteam
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }}
+        # clone 方式
+        clone_style: "ssh"
+        # 账户类型 user org
+        account_type: org
+        # 静态同步
+        static_list: '${{ steps.repo.outputs.repoList }}'
+        # 缓存路径
+        cache_path: /github/workspace/hub-mirror-cache
+        force_update: true 
+ 
