@@ -18,11 +18,17 @@ jobs:
     - name: Mirror the sigminer repos to Gitee.
       uses: Yikun/hub-mirror-action@master
       with:
+        # 源地址
         src: github/Gonglja
+        # 目的地址
         dst: ${{ secrets.GITEE_USER }}
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }}
+        # clone 方式
+        clone_style: "ssh"
+        # 账户类型 user org
         account_type: user
+        # 静态同步
         static_list: 'linux-driver, Sky, dotfiles, obsidian, translate, learn-json'
         force_update: true 
  
