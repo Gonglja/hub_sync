@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Mirror the sigminer repos to Gitee.
-      uses: Yikun/hub-mirror-action@master
+      uses: Yikun/hub-mirror-action@dst_visibility
       with:
         # 源地址
         src: github/FuntionTeam
@@ -29,8 +29,10 @@ jobs:
         # 账户类型 user org
         account_type: org
         # 静态同步
-        static_list: 'FXRFID, FXGFS, FXLCD, app_fivd, linux-xlnx-xilinx-v2018.3, u-boot-xlnx-xilinx-v2018.3, osc_refactor, oscilloscope, uart_dma-stm32f407cube, qcustcomplot-lib, cyapi-qt, qcustcomplot-lib'
+        static_list: 'FXRFID, FXGFS, FXLCD, app_fivd, linux-xlnx-xilinx-v2018.3, u-boot-xlnx-xilinx-v2018.3, osc_refactor, oscilloscope, uart_dma-stm32f407cube, qcustcomplot-lib, cyapi-qt'
         # 缓存路径
         cache_path: /github/workspace/hub-mirror-cache
+        # 目的端可见性 
+        dst_visibility: 'private'
         force_update: true 
  
