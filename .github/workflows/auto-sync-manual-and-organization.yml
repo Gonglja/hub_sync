@@ -31,7 +31,7 @@ jobs:
         # 静态同步
         static_list: 'FXRFID, FXGFS, FXLCD, app_fivd, linux-xlnx-xilinx-v2018.3, u-boot-xlnx-xilinx-v2018.3, osc_refactor, oscilloscope, uart_dma-stm32f407cube, qcustcomplot-lib, cyapi-qt'
         # 缓存路径
-        cache_path: /github/workspace/hub-mirror-cache
+        # cache_path: /github/workspace/hub-mirror-cache
         # 目的端可见性 
         dst_visibility: 'private'
         force_update: true 
