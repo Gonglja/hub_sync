@@ -29,8 +29,7 @@ jobs:
         # 账户类型 user org
         account_type: org
         # 静态同步
-        static_list: 'FXEFID, FXGFS, FXLCD, app_fivd, linux-xlnx-xilinx-v2018.3, u-boot-xlnx-xilinx-v2018.3, osc_refactor, oscilloscope, uart_dma-stm32f407cube, qcustcomplot-lib, cyapi-qt, qcustcomplot-lib
-'
+        static_list: 'FXRFID, FXGFS, FXLCD, app_fivd, linux-xlnx-xilinx-v2018.3, u-boot-xlnx-xilinx-v2018.3, osc_refactor, oscilloscope, uart_dma-stm32f407cube, qcustcomplot-lib, cyapi-qt, qcustcomplot-lib'
         # 缓存路径
         cache_path: /github/workspace/hub-mirror-cache
         force_update: true 
