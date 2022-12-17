@@ -15,13 +15,6 @@ jobs:
     name: Sync-Gitee-Manual-and-Org
     runs-on: ubuntu-latest
     steps:
-    - name: Generate repo list
-      id: repo
-      uses: yi-Xu-0100/repo-list-generator@v0.4.1
-      with:
-        user: yi-Xu-0100
-        my_token: ${{ secrets.REPO_TOKEN }}
-
     - name: Mirror the sigminer repos to Gitee.
       uses: Yikun/hub-mirror-action@master
       with:
@@ -36,7 +29,8 @@ jobs:
         # 账户类型 user org
         account_type: org
         # 静态同步
-        static_list: '${{ steps.repo.outputs.repoList }}'
+        static_list: 'FXEFID, FXGFS, FXLCD, app_fivd, linux-xlnx-xilinx-v2018.3, u-boot-xlnx-xilinx-v2018.3, osc_refactor, oscilloscope, uart_dma-stm32f407cube, qcustcomplot-lib, cyapi-qt, qcustcomplot-lib
+'
         # 缓存路径
         cache_path: /github/workspace/hub-mirror-cache
         force_update: true 
