@@ -29,6 +29,6 @@ jobs:
         # 账户类型 user org
         account_type: user
         # 静态同步
-        static_list: 'linux-driver, Sky, dotfiles, obsidian, translate, learn-json, vsps, stm32_can_forward, linux-smart210, u-boot-smart210, learn-codes'
+        static_list: 'linux-driver, Sky, dotfiles, obsidian, translate, vsps, stm32_can_forward, linux-smart210, u-boot-smart210, learn-codes'
         force_update: true 
  
